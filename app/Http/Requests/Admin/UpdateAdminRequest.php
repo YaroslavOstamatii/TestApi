@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateRequest extends FormRequest
+class UpdateAdminRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -14,10 +14,9 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['string'],
+            'name' => ['string','max:255'],
             'email' => ['string', 'email', 'max:255'],
-            'password' => ['string', 'min:8'],
-            'role' => ['integer'],
+            'password' => ['string', 'min:8','max:255'],
         ];
     }
 }

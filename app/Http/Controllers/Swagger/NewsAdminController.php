@@ -5,15 +5,10 @@ namespace App\Http\Controllers\Swagger;
 use App\Http\Controllers\Controller;
 
 /**
- * @OA\Info(
- *    description="News Api",
- *    version="1.0.0",
- *    title="Swagger NewsApi"
- * ),
  *
  * @OA\Get(
- *     path="/api/news",
- *     tags={"News"},
+ *     path="/apiAdmin/news",
+ *     tags={"NewsAdmin"},
  *     summary="Get all new news",
  *     @OA\Response(
  *         response=200,
@@ -33,8 +28,8 @@ use App\Http\Controllers\Controller;
  * ),
  *
  * @OA\Get(
- *     path="/api/news/{post}",
- *     tags={"News"},
+ *     path="/apiAdmin/news/{post}",
+ *     tags={"NewsAdmin"},
  *     summary="Get news by id",
  *     @OA\Parameter(
  *         description="news ID",
@@ -66,8 +61,8 @@ use App\Http\Controllers\Controller;
  * ),
  *
  * @OA\Post(
- *     path="/api/news",
- *     tags={"News"},
+ *     path="/apiAdmin/news",
+ *     tags={"NewsAdmin"},
  *     summary="Store a new news",
  *     @OA\RequestBody(
  *         @OA\JsonContent(
@@ -94,8 +89,8 @@ use App\Http\Controllers\Controller;
  * ),
  *
  * @OA\Put(
- *     path="/api/news/{post}",
- *     tags={"News"},
+ *     path="/apiAdmin/news/{post}",
+ *     tags={"NewsAdmin"},
  *     summary="Update news by id",
  *     @OA\Parameter(
  *         description="news ID",
@@ -137,8 +132,8 @@ use App\Http\Controllers\Controller;
  * ),
  *
  * @OA\Delete(
- *     path="/api/news/{post}",
- *     tags={"News"},
+ *     path="/apiAdmin/news/{post}",
+ *     tags={"NewsAdmin"},
  *     summary="Delete news by id",
  *     @OA\Parameter(
  *         description="news ID",
@@ -162,6 +157,6 @@ use App\Http\Controllers\Controller;
  * ),
  */
 
-class NewsController extends Controller
+class NewsAdminController extends Controller
 {
 }
